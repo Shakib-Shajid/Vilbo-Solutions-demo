@@ -8,11 +8,38 @@
     <!-- daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .scrolling-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            display: flex;
+            width: 100%;
+        }
 
+        .scrolling-text {
+            display: flex;
+            gap: 1rem;
+            /* Adjust spacing */
+            min-width: 100%;
+            flex-shrink: 0;
+            animation: scrollText 10s linear infinite;
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 
 </head>
 
-<body>
+<body class="max-w-7xl mx-auto ">
 
     <!-- navbar start -->
     <div class="navbar shadow-sm">
@@ -26,7 +53,7 @@
                     </svg>
                 </div>
                 <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-xl">
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-xl text-[#ffbf00]">
                     <li><a>Acerca de</a></li>
                     <li><a>Servicios</a></li>
                     <li><a>Blog</a></li>
@@ -40,7 +67,7 @@
         </div>
 
         <div class="navbar-end">
-            <ul class="menu menu-horizontal px-1 hidden md:flex text-lg">
+            <ul class="menu menu-horizontal px-1 hidden md:flex text-lg text-[#ffbf00]">
                 <li><a>Acerca de</a></li>
                 <li><a>Servicios</a></li>
                 <li><a>Blog</a></li>
@@ -52,12 +79,12 @@
 
 
     <!-- banner start -->
-    <div class='w-full max-w-7xl mx-auto flex flex-col gap-10 justify-center items-center lg:flex-row-reverse lg:mt-10'
+    <!-- <div class='w-full max-w-7xl mx-auto flex flex-col gap-10 justify-center items-center lg:flex-row-reverse lg:mt-10'
         data-aos="fade-right">
 
         <Image src="/images/banner.jpg" alt="" class='w-[80%] md:w-[50%] rounded-3xl mx-auto' />
 
-        <div class='w-[80%] lg:ml-10 space-y-3'>
+        <div class='w-[80%] space-y-3'>
             <h3 class='text-xl font-bold text-white uppercase font-dm_sans'> <span id="typing-text"></span><span
                     class="animate-pulse">|</span></h3>
             <p class='text-4xl font-bold leading-tight font-montserrat text-[#ffbf00]'>Maximiza el Potencial de tus
@@ -72,8 +99,21 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
+    <div class="hero h-[600px] md:h-[600px] rounded-3xl" style="background-image: url('/images/bcn1.jpg');">
+        <div class="hero-overlay"></div>
+        <div class=" text-neutral-content text-center text-white">
+            <div class="">
+                <h1 class="mb-5 text-5xl font-bold"><span id="typing-text"></span><span class="animate-pulse text-[#ffbf00]">|</span>
+                </h1>
+                <p class="mb-5 text-2xl font-bold">
+                    Maximiza el Potencial de tus Espacios Corporativos a través de Eventos Recurrentes.
+                </p>
+                <p class="text-xl">Convierte cada rincón en una oportunidad de crecimiento y rentabilidad.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- banner end -->
     <script>
@@ -110,7 +150,25 @@
         window.onload = () => typeText();
     </script>
 
-
+    <div class="scrolling-container w-full text-5xl font-bold my-10 text-[#ecbd31]">
+        <div class="scrolling-text">
+            <span>Profesionalidad</span> /
+            <span>Innovación</span> /
+            <span>Creatividad</span> /
+            <span>Profesionalidad</span> /
+            <span>Innovación</span> /
+            <span>Creatividad</span> /
+        </div>
+        <!-- Duplicate for seamless scrolling -->
+        <div class="scrolling-text">
+            <span>Profesionalidad</span> /
+            <span>Innovación</span> /
+            <span>Creatividad</span> /
+            <span>Profesionalidad</span> /
+            <span>Innovación</span> /
+            <span>Creatividad</span> /
+        </div>
+    </div>
 
 
 </body>
